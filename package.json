@@ -1,0 +1,53 @@
+{
+  "name": "vite-plugin-build-version",
+  "version": "0.1.0",
+  "description": "Vite plugin that generates a build-version.json file for frontend deployments.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "docs/getting-started.md",
+    "docs/api-reference.md",
+    "docs/strategies.md",
+    "docs/reload-app-integration.md",
+    "docs/usage-examples.md",
+    "docs/roadmap.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "build-version",
+    "build-id",
+    "deployment",
+    "react-build-reload"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12",
+    "vitest": "^4.1.7"
+  }
+}
