@@ -1,0 +1,17 @@
+node_modules
+src
+coverage
+.vite
+.git
+.github
+.gitignore
+vite.config.ts
+vitest.config.ts
+tsconfig.json
+tsconfig.build.json
+docs/project-plan.md
+docs/goals.md
+docs/architecture.md
+docs/implementation-plan.md
+docs/testing-plan.md
+docs/release-checklist.md
